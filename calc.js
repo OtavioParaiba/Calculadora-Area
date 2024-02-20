@@ -43,26 +43,31 @@ diagonalMenor.setAttribute('placeholder' , 'Diagonal Menor')
 var botao = document.createElement('button')
 botao.innerText = 'Calcular'
 botao.id = 'calcular'
+botao.className = "btn btn-primary"
 
 //Formulas Matematicas para cada possiblidade de forma
 
 const formTri = (conta) =>{
+    res.style.display = 'block'
     conta = (base.value * altura.value) / 2
     res.innerHTML = `A area do triangulo é ${conta}`
 }
 
 
 const formCir = (conta) =>{
+    res.style.display = 'block'
     conta = (raio.value * raio.value) * 3.14
     res.innerHTML = `A area do Circulo é ${conta}`
 }
 
 const formRet = (conta) =>{
+    res.style.display = 'block'
     conta = (base.value * altura.value) 
     res.innerHTML = `A area do Retangulo é ${conta}`
 }
 
 const formTra = (conta) =>{
+    res.style.display = 'block'
     let nBaseMaior = Number(baseMaior.value)
     let nBaseMenor = Number(baseMenor.value)
     conta = ((nBaseMaior + nBaseMenor) * altura.value) / 2 
@@ -71,6 +76,7 @@ const formTra = (conta) =>{
 
 
 const formLos = (conta) => {
+    res.style.display = 'block'
     conta = (diagonalMaior.value * diagonalMenor.value) / 2
     res.innerHTML = `A area do Losango é ${conta}`
 }
@@ -80,6 +86,7 @@ const formLos = (conta) => {
 
 //Função para selecionar a forma Geometrica
 function definirF(){
+    res.style.display = 'none'
 
     let divDados = document.getElementById('dados')
     let img = document.getElementById('imagemvar')
